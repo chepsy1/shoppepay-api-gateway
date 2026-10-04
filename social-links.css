@@ -1,0 +1,48 @@
+/* digitalEVO social/contact icons directly below the activity ticker */
+.de-social-links {
+  width: 100%;
+  padding: 2px 0 10px;
+  background: transparent;
+}
+
+.de-social-links-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 17px;
+}
+
+.de-social-link {
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #111;
+  text-decoration: none;
+  transition: transform .18s ease, opacity .18s ease;
+}
+
+.de-social-link svg {
+  width: 27px;
+  height: 27px;
+  display: block;
+}
+
+.de-social-link:hover,
+.de-social-link:focus-visible {
+  transform: translateY(-2px) scale(1.06);
+  opacity: .72;
+}
+
+.de-social-link:focus-visible {
+  outline: 2px solid #111;
+  outline-offset: 3px;
+  border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+  .de-social-links { padding: 1px 0 9px; }
+  .de-social-links-inner { gap: 14px; }
+  .de-social-link, .de-social-link svg { width: 26px; height: 26px; }
+}

@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>digitalEVO Admin</title><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="admin.css"><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="supabase-config.js"></script></head>
+<body class="admin-body">
+<header class="admin-top"><div><strong>digitalEVO</strong><span>Admin Panel</span></div><button id="logoutBtn" class="btn btn-light" hidden>Logout</button></header>
+<main class="admin-wrap">
+<section id="loginView" class="admin-card login-card"><span class="eyebrow">ADMIN</span><h1>Kelola website digitalEVO</h1><p>Login dengan akun admin untuk mengubah tulisan, harga, foto produk, banner, header dan footer tanpa upload HTML lagi.</p><form id="loginForm"><label>Email<input id="loginEmail" type="email" required></label><label>Password<input id="loginPassword" type="password" required></label><button class="btn btn-primary full">Login</button></form><p id="loginMsg" class="admin-msg" role="alert" aria-live="polite"></p></section>
+<section id="panelView" hidden>
+<div class="admin-grid">
+<section class="admin-card"><div class="admin-head"><div><span class="eyebrow">KONTEN</span><h2>Tulisan Website</h2></div><button id="saveSite" class="btn btn-primary">Simpan</button></div>
+<div class="form-grid"><label>Judul Followers<input id="followerTitle"></label><label>Subjudul Followers<input id="followerSubtitle"></label><label>Label Followers<input id="followerEyebrow"></label><label>Badge Diskon Followers<input id="followerDiscount"></label><label>Judul Akun Premium<input id="accountTitle"></label><label>Label Akun Premium<input id="accountEyebrow"></label><label class="full-col">Deskripsi Akun Premium<textarea id="accountDescription" rows="3"></textarea></label><label>Label Kontak<input id="contactEyebrow"></label><label>Judul Kontak<input id="contactTitle"></label><label>Nomor WhatsApp<input id="contactWhatsapp"></label></div><p id="siteMsg" class="admin-msg"></p></section>
+<section class="admin-card"><div class="admin-head"><div><span class="eyebrow">FOTO</span><h2>Header, Banner & Footer</h2></div></div><div id="imageSettings" class="image-admin-grid"></div><p class="hint">Foto baru langsung tersimpan ke Supabase Storage dan dipakai website setelah halaman di-refresh.</p><p id="imageMsg" class="admin-msg"></p></section>
+</div>
+<section class="admin-card"><div class="admin-head"><div><span class="eyebrow">PRODUK</span><h2>Followers Shopee</h2></div><button id="addFollower" class="btn btn-primary">+ Produk</button></div><div id="followersTable" class="product-admin-list"></div></section>
+<section class="admin-card"><div class="admin-head"><div><span class="eyebrow">PRODUK</span><h2>Akun Shopee Premium</h2></div><button id="addAccount" class="btn btn-primary">+ Produk</button></div><div id="accountsTable" class="product-admin-list"></div></section>
+</section></main>
+<script src="admin.js"></script></body></html>

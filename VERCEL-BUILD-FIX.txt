@@ -1,0 +1,12 @@
+FIX FOR VERCEL BUILD ERROR
+
+The previous package ran javascript-obfuscator against server-raw.js.
+That source file is not present in this package, while server.js is already
+the built/obfuscated server used by the Vercel API function.
+
+The build script has been changed to a no-op and javascript-obfuscator removed
+from the gateway dependencies.
+
+For Vercel, use the repository/project ROOT (the folder containing:
+package.json, vercel.json, api/[...route].js, and shoppepay-api-gateway/).
+Do not set Root Directory to shoppepay-api-gateway.

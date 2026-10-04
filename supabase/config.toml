@@ -1,0 +1,10 @@
+project_id = "cpmfrystzzrdbpfcikwg"
+
+[functions.create-qris]
+verify_jwt = false
+
+[functions.check-qris]
+verify_jwt = false
+
+[functions.qris-webhook]
+verify_jwt = false
