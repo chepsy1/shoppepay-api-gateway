@@ -1,4 +1,6 @@
-require("dotenv").config();
+// Memaksa Vercel memasukkan dotenv ke dalam Serverless Function.
+// Environment Variables Vercel tetap menjadi sumber konfigurasi utama.
+require("dotenv");
 
 const app = require("../shoppepay-api-gateway/server");
 
